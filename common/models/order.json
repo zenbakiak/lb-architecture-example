@@ -1,0 +1,36 @@
+{
+  "name": "Order",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "customerEmail": {
+      "type": "string",
+      "required": true
+    },
+    "customerFullname": {
+      "type": "string",
+      "required": true
+    },
+    "number": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "activities": {
+      "type": "hasMany",
+      "model": "OrderActivity",
+      "foreignKey": "orderId"
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "mixins": {
+    "ReadOnly": {
+      "id": true
+    }
+  }
+}
