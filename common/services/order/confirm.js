@@ -18,7 +18,7 @@ class Confirm {
       let validateOps = {abortEarly: false, stripUnknown: true}
       let validator = Joi.validate(this.data, schema, validateOps)
       if (validator.error) {
-        throw new ValidationError('order confirm validation error', validator.error)
+        throw new ValidationError('order validation error', validator.error)
       }
 
       return 'success'
