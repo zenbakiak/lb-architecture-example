@@ -3,7 +3,7 @@ const DatabaseCleaner = require('database-cleaner')
 const dbConfigs = require('../../server/datasources.test')
 
 const cleanDB = (cb) => {
-  let cleanerConfig = { postgresql: { strategy: 'truncation', skipTables: [] } }
+  let cleanerConfig = {postgresql: {strategy: 'truncation', skipTables: []}}
   let databaseCleaner = new DatabaseCleaner('postgresql', cleanerConfig)
   let connString = dbConfigs.db.url
 

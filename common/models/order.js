@@ -14,7 +14,7 @@ module.exports = function (Order) {
 
   Order.remoteMethod(
     'confirm', {
-      accepts: { arg: 'data', type: 'object', http: { source: 'body' } },
+      accepts: {arg: 'data', type: 'object', http: {source: 'body'}},
       http: {
         path: '/confirm',
         verb: 'post'
