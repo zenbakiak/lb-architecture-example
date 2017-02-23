@@ -11,7 +11,10 @@
 $ cd /path/to/project
 $ npm install
 ```
-* Node . (to run the server)
+* Run loopback server
+```
+$ node .
+```
 
 ## Running tests
 
