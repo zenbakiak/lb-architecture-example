@@ -1,17 +1,17 @@
 # Skydrop & Loopback app structure
 ## Dependencies
-1- Nodejs >= 7
-2- npm >= 4
+* Nodejs >= 7
+* npm >= 4
 
 ## Install
 
-1- Create the Databases in postgresql: skydrop_next, skydrop_next_test (user: next, pass: skydrop_next)
-2- Install the dependencies
+* Create the Databases in postgresql: skydrop_next, skydrop_next_test (user: next, pass: skydrop_next)
+* Install the dependencies
 ```
 $ cd /path/to/project
 $ npm install
 ```
-3- Node . (to run the server)
+* Node . (to run the server)
 
 ## Running tests
 
