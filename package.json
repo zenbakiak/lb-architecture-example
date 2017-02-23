@@ -1,6 +1,9 @@
 {
   "name": "lbdemo",
   "version": "1.0.0",
+  "standard": {
+    "env": ["mocha"]
+  },
   "main": "server/server.js",
   "scripts": {
     "console": "loopback-console",

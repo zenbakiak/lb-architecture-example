@@ -1,0 +1,13 @@
+{
+  "validUser": {
+    "username": "elsursk",
+    "email": "elsursk@hotmail.com",
+    "emailVerified": true,
+    "password": "pass"
+  },
+  "invalidUser": {
+    "username": "elsursk",
+    "email": "elsursk@hotmail.com",
+    "emailVerified": true
+  }
+}
