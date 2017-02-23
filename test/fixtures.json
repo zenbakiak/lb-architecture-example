@@ -9,5 +9,17 @@
     "username": "elsursk",
     "email": "elsursk@hotmail.com",
     "emailVerified": true
+  },
+  "validOrderActivity": {
+    "orderId": 1,
+    "status": "in_transit",
+    "cod": {
+      "isActive": true,
+      "amount": 50000
+    }
+  },
+  "invalidOrderActivity": {
+    "orderId": 1,
+    "status": "in_transit"
   }
 }

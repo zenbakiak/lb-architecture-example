@@ -22,4 +22,8 @@ module.exports = function (OrderActivity) {
       err(false)
     }
   }
+
+  OrderActivity.prototype.inTransit = function () {
+    return this.status === 'in_transit'
+  }
 }
