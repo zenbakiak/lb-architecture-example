@@ -7,9 +7,7 @@ module.exports = function (Order) {
       .then(order => {
         cb(null, order)
       })
-      .catch(error => {
-        cb(error)
-      })
+      .catch(cb)
   }
 
   Order.remoteMethod(
