@@ -1,4 +1,5 @@
 const Joi = require('joi')
+const ErrMapper = require('../lib/errors/error-mapper')
 
 const codSchema = Joi.object({cod: Joi.object({
   isActive: Joi.boolean().truthy(1).falsy(0).required(),
@@ -12,13 +13,7 @@ module.exports = function (OrderActivity) {
     let validator = Joi.validate({cod: this.cod}, codSchema)
 
     if (validator.error) {
-      validator.error.details.forEach((err) => {
-        this.errors.add(
-            err.path,
-            err.message,
-            err.type
-            )
-      })
+      ErrMapper.addJoiErrorsToModel(this, validator.error)
       err(false)
     }
   }
