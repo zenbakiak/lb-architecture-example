@@ -4,8 +4,8 @@ class AbstractError extends Error {
   constructor (message, extra) {
     super(message)
     this.name = this.constructor.name
-    this.extra = extra
-    this.errorResponse = new ErrorResponse(extra)
+    this.details = this._initDetails(extra)
+    this.statusCode = this.constructor.status()
 
     if (typeof Error.captureStackTrace === 'function') {
       Error.captureStackTrace(this, this.constructor)
@@ -14,8 +14,13 @@ class AbstractError extends Error {
     }
   }
 
-  response () {
-    return this.errorResponse.response()
+  static status () {
+    return 500
+  }
+
+  _initDetails (extra) {
+    let response = new ErrorResponse(extra)
+    return response.mapResponse()
   }
 }
 

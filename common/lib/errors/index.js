@@ -1,7 +1,12 @@
 const AbstractError = require('./abstract-error')
 
-class ValidationError extends AbstractError {}
-class ApplicationError extends AbstractError {}
+class ValidationError extends AbstractError {
+  static status () {
+    return 422
+  }
+}
+class ApplicationError extends AbstractError {
+}
 
 module.exports = {
   ValidationError,

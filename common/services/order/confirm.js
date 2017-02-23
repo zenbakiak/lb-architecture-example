@@ -15,9 +15,10 @@ class Confirm {
 
   run () {
     return Promise.try(() => {
-      let validator = Joi.validate(schema, this.data)
+      let validateOps = {abortEarly: false, stripUnknown: true}
+      let validator = Joi.validate(this.data, schema, validateOps)
       if (validator.error) {
-        throw new ValidationError('OrderConfirm', validator.error)
+        throw new ValidationError('order confirm validation error', validator.error)
       }
 
       return 'success'

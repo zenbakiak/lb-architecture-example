@@ -8,7 +8,7 @@ module.exports = function (Order) {
         cb(null, order)
       })
       .catch(error => {
-        cb(error.response)
+        cb(error)
       })
   }
 
@@ -20,7 +20,6 @@ module.exports = function (Order) {
         verb: 'post'
       },
       returns: {
-        arg: 'response',
         type: 'object',
         root: true
       }

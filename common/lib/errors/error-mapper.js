@@ -21,17 +21,6 @@ class ErrorResponse {
   }
 
   mapJoiResponse () {
-    return {
-      error: {
-        statusCode: 422,
-        name: 'ValidationError',
-        message: 'Invalid params',
-        details: this.joiDetails()
-      }
-    }
-  }
-
-  joiDetails () {
     let codes = {}
     let messages = {}
 
@@ -48,13 +37,7 @@ class ErrorResponse {
   }
 
   mapStdResponse () {
-    return {
-      error: {
-        statusCode: 422,
-        name: 'ApplicationError',
-        message: this.error.message
-      }
-    }
+    return {}
   }
 }
 
