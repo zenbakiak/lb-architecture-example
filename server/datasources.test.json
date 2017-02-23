@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "postgresql",
+    "host": "localhost",
+    "port": 5432,
+    "url": "postgres://skydrop_next:next@localhost/skydrop_next_test",
+    "database": "skydrop_next",
+    "password": "skydrop_next",
+    "user": "next"
+  }
+}
+

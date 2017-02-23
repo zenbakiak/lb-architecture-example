@@ -6,7 +6,7 @@
     "console": "loopback-console",
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint && nsp check"
+    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --reporter spec test/**/*.test.js"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -23,9 +23,17 @@
     "strong-error-handler": "^1.0.1"
   },
   "devDependencies": {
-    "eslint": "^2.13.1",
+    "async": "latest",
+    "database-cleaner": "^1.2.0",
+    "eslint": "^3.16.1",
     "eslint-config-loopback": "^4.0.0",
-    "nsp": "^2.1.0"
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.2",
+    "eslint-plugin-standard": "^2.0.1",
+    "mocha": "^2.2.5",
+    "nsp": "^2.1.0",
+    "pg": "^6.1.2",
+    "supertest": "^1.0.1"
   },
   "repository": {
     "type": "",

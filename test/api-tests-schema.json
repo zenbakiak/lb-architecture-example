@@ -1,0 +1,31 @@
+[
+  {
+    "method": "GET",
+    "model": "Users",
+    "expect": 401
+  },
+  {
+    "method": "POST",
+    "model": "Users",
+    "withData": {
+      "realm": "string",
+      "username": "string",
+      "email": "acolin@gmail.com",
+      "emailVerified": true,
+      "password": "arc141985ROCA"
+    },
+    "expect": 200
+  },
+  {
+    "method": "POST",
+    "model": "Users",
+    "withData": {
+      "realm": "string",
+      "username": "string",
+      "email": "acolin@gmail.com",
+      "emailVerified": true,
+      "password": "arc141985ROCA"
+    },
+    "expect": 200
+  }
+]
