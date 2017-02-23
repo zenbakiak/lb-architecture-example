@@ -11,7 +11,7 @@
 $ cd /path/to/project
 $ npm install
 ```
-2- Node . (to run the server)
+3- Node . (to run the server)
 
 ## Running tests
 
